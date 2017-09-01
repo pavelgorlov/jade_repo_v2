@@ -1,0 +1,51 @@
+.field .acc {
+	display: none;
+}
+
+.field__head {
+	@include clearfix;
+}
+
+.field__heading {
+    font-size: rem(36);
+	margin-bottom: rem(15);
+	width: calc(100% - 295px);
+	float: right;
+}
+
+.field__img {
+	width: rem(260);
+	float: left;
+}
+
+.field__text {
+	font-family: 'Calibri';
+	font-size: rem(16);
+	width: calc(100% - 295px);
+	float: right;
+}
+
+
+@media (max-width: 899px) {
+  .field .acc {
+    display: block;
+  }
+
+  .field .tabs {
+	  display: none;
+  }
+}
+
+@media (max-width: 640px) {
+	.field__img {
+		float: none;
+		width: 100%;
+		margin-bottom: 2em;
+	}
+
+	.field__heading,
+	.field__text {
+		float: none;
+		width: 100%;
+	}
+}

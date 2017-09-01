@@ -1,0 +1,34 @@
+//.top-line {
+//	position: relative;
+//	padding-top: rem(30);
+//	padding-bottom: rem(30);
+//	@include clearfix;
+//
+//	.login {
+//		display: inline-block;
+//		vertical-align: middle;
+//		margin: 0 rem(20);
+//	}
+//
+//	.login__link {
+//		color: $blue;
+//		display: block;
+//	}
+//}
+//
+//@media (max-width: 900px) {
+//	.logo--header .logo__descr {
+//		display: none;
+//	}
+//}
+//
+//@media (max-width: 640px) {
+//
+//	.top-line {
+//		.lang-switcher,
+//		.search:not(.search--mobile),
+//		.login {
+//			display: none;
+//		}
+//	}
+//}

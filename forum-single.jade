@@ -1,0 +1,17 @@
+extends _layouts/main
+
+block head_end
+    link(rel="stylesheet" href="assets/css/style.css") 
+
+block content
+    article.material.material--forum
+        .material__img(class="#{imgClass}")
+            img(src="assets/img/#{img}" alt="#{title}")
+        .material__content
+            h1.material__title #{title}
+            .material__text 
+                each p in text
+                    p #{p}
+            span.material__link Cайт форума <a href="" class="link link--lg">forumspb.com</a>
+block body_end
+    script(type="text/javascript" src="assets/js/script.js")

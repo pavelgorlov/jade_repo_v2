@@ -1,0 +1,21 @@
+extends _layouts/footer-only
+
+block head_end
+	link(rel="stylesheet" href="assets/css/style.css") 
+
+block content
+	.fields
+		ul.fields__list
+			each field in fields
+				li(class="fields__field fields__field--#{field.className}")
+					span.field__name #{field.name}
+					span.field__counter #{field.counter}
+					ul.fields__sub-list
+						each subfield in field.subfields
+							li.fields__subfield
+								span.field__name #{subfield.name}
+								span.field__counter #{subfield.counter}
+	
+block body_end
+	script(type="text/javascript" src="assets/js/script.js")
+	script(type="text/javascript" src="assets/js/fields.js")

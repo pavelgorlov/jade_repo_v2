@@ -1,0 +1,13 @@
+.text-content {
+    font-family: 'Calibri';
+}
+
+.text-content__title {
+    font-weight: bold;
+    margin: rem(20) 0;
+}
+
+.text-content__title,
+.text-content__text {
+    font-size: rem(16);
+}

@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'GloberLight';
+  src: url('GloberLight.eot?#iefix') format('embedded-opentype'),  url('GloberLight.otf')  format('opentype'),
+	     url('GloberLight.woff') format('woff'), url('GloberLight.ttf')  format('truetype'), url('GloberLight.svg#GloberLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

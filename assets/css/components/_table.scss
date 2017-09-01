@@ -1,0 +1,39 @@
+.table {
+  font-size: rem(18);
+  border-collapse: collapse;
+  font-family: 'CalibriLightItalic';
+
+  thead {
+
+  }
+
+  th, td {
+    padding: rem(3) rem(10);
+  }
+
+  th {
+    text-align: left;
+    padding-bottom: rem(15);
+  }
+
+  td {
+    color: $blue;
+    border-bottom: 2px solid $grey;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  td:first-child {
+    width: 60%;
+  }
+
+  td:not(:first-child) {
+    text-align: center;
+  }
+
+  tbody tr {
+    border-bottom: 2px solid $grey;
+  }
+}

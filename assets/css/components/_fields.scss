@@ -1,0 +1,178 @@
+.fields {
+	margin-bottom: rem(80);
+
+  a {
+    color: inherit;
+  }
+}
+
+.fields__field {
+	margin: 0 0 rem(27) rem(80);
+	padding-top: rem(27);
+	border-bottom: rem(1) solid #B3B3B3;
+	position: relative;
+	cursor: pointer;
+
+	&--opened {
+		border: none;
+
+		> .field__name {
+			font-family: 'Cambria';
+		  	font-weight: normal;
+			color: #000;
+
+      &:after {
+        content: '↓';
+        color: $blue;
+        padding-left: .5em;
+        font-family: 'Cambria';
+      }
+		}
+	}
+
+	&:before {
+		position: absolute;
+		left: rem(-80);
+		top: rem(15);
+		content: '';
+		width: rem(52);
+		height: rem(52);
+		background-size: cover;
+	}
+
+	&--geo:before {
+		background-image: url("../../assets/img/fields/geo.svg");
+	}
+
+	&--gos:before {
+		background-image: url("../../assets/img/fields/gos.svg");
+	}
+
+	&--inv:before {
+		background-image: url("../../assets/img/fields/inv.svg");
+	}
+
+	&--cul:before {
+		background-image: url("../../assets/img/fields/cul.svg");
+	}
+
+	&--sci:before {
+		background-image: url("../../assets/img/fields/sci.svg");
+	}
+
+	&--geo:before {
+		background-image: url("../../assets/img/fields/geo.svg");
+	}
+
+	&--apk:before {
+		background-image: url("../../assets/img/fields/apk.svg");
+	}
+
+	&--ter:before {
+		background-image: url("../../assets/img/fields/ter.svg");
+	}
+
+	&--grow:before {
+		background-image: url("../../assets/img/fields/grow.svg");
+	}
+
+	&--fin:before {
+		background-image: url("../../assets/img/fields/fin.svg");
+	}
+
+	&--trans:before {
+		background-image: url("../../assets/img/fields/trans.svg");
+	}
+
+	&--cap:before {
+		background-image: url("../../assets/img/fields/cap.svg");
+	}
+}
+
+.field__name {
+	font-size: rem(24);
+	color: $blue;
+}
+
+.field__counter {
+	font-size: rem(24);
+	color: black;
+	float: right;
+	font-family:  'Cambria';
+  	font-weight: bold;
+
+  .fields__sub-list & {
+    font-family: 'Cambria';
+    color: $blue;
+  }
+}
+
+
+.fields__sub-list {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height .5s;
+
+	.fields__field--opened & {
+		max-height: rem(2000);
+	}
+}
+
+.fields__subfield {
+	margin-bottom: rem(27);
+	padding-top: rem(27);
+	border-bottom: rem(1) solid #B3B3B3;
+	cursor: pointer;
+
+	&:first-child {
+		padding-top: rem(54);
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+@media(min-width: 640px) {
+
+  .field__counter {
+    color: $blue;
+
+    .fields__field--opened > & {
+      color: black;
+
+      &:after {
+        color: black;
+      }
+    }
+
+    &:after {
+      content: 'записей';
+      font-family: 'Cambria';
+      padding-left: 0.5em;
+      color: $blue;
+    }
+  }
+
+  .fields__field--opened {
+    margin-bottom: 0;
+    padding-bottom: rem(27);
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: rem(-150);
+      width: 100vw;
+      height: 100%;
+      background-color: $light-grey;
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+
+}

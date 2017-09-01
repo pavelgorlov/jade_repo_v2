@@ -1,0 +1,11 @@
+.sass-cache
+*.thumb
+.DS_Store
+Thumbs.db
+
+*.swp
+.idea
+.vscode
+
+node_modules
+npm-debug.log

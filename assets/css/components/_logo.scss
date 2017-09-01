@@ -1,0 +1,31 @@
+.brand-logo{
+	min-height: rem(54);
+	padding: 0 0 0 rem(47);
+	position: relative;
+	display: block;
+	margin-left: rem(-1);
+
+	&:hover *{
+		opacity: .6;
+	}
+
+	span {
+		color: #777;
+		font-size: rem(15.8);
+		padding-top: rem(9);
+		line-height: rem(19);
+		white-space: nowrap;
+		font-family: 'Calibri';
+		display: block;
+	}
+
+	svg {
+		width: rem(31);
+		position: absolute;
+		top:rem(11);
+		left: 0;
+	}
+}
+
+
+

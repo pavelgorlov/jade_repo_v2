@@ -1,0 +1,158 @@
+{
+	"title": "Главная",
+	"sections" : 
+	[
+		{
+			"title" : "Материалы",
+			"counter" : "49 материалов",
+		  	"type":"materials",
+			"materials" : 
+			[
+				{
+					"boxClass" : "material material--grid material--grid--small",
+					"img" : "demo_cover",
+					"imgClass" : "material__img--full",
+					"title" : "Новый бизнес в России — реализованные возможности",
+					"category" : "Человеческий капитал",
+					"text" : "Объявлена программа IV Международного арктического форума «Арктика — территория диалога», который пройдет 29—30 марта 2017 года в Архангельске."
+				},
+				{
+					"boxClass" : "material material--grid material--grid--small",
+					"img" : "demo_cover",
+					"imgClass" : "material__img--full",
+					"title" : "Машиностроение в фокусе",
+					"category" : "Человеческий капитал",
+					"text" : "Объявлена программа IV Международного арктического форума «Арктика — территория диалога», который пройдет 29—30 марта 2017 года в Архангельске."
+				},
+				{
+					"boxClass" : "material material--grid material--grid--small",
+					"img" : "demo_cover",
+					"imgClass" : "material__img--full",
+					"title" : "Иностранные производства",
+					"category" : "Человеческий капитал",
+					"text" : "Объявлена программа IV Международного арктического форума «Арктика — территория диалога», который пройдет 29—30 марта 2017 года в Архангельске."
+				},
+				{
+					"boxClass" : "material material--grid material--grid--small",
+					"img" : "demo_cover",
+					"imgClass" : "material__img--full",
+					"title" : "Иностранные производства",
+					"category" : "Человеческий капитал",
+					"text" : "Объявлена программа IV Международного арктического форума «Арктика — территория диалога», который пройдет 29—30 марта 2017 года в Архангельске."
+				}
+			]
+		},
+		{
+			"title" : "Мероприятия",
+			"counter" : "25 мероприятий",
+		  	"type":"events",
+			"materials" : 
+			[
+				{
+					"boxClass" : "material material--grid",
+					"img" : "test",
+					"imgClass" : "material__img--full",
+					"title" : "Арктика — территория диалога",
+					"category" : "Человеческий капитал",
+					"text" : "Объявлена программа IV Международного арктического форума «Арктика — территория диалога», который пройдет 29—30 марта 2017 года в Архангельске.Объявлена программа IV Международного арктического форума «Арктика — территория диалога», который пройдет 29—30 марта 2017 года в Архангельске."
+				},
+				{
+					"boxClass" : "material material--grid",
+					"img" : "test",
+					"imgClass" : "material__img--full",
+					"title" : "Ядерная энергетика — ядро экономики",
+					"category" : "Человеческий капитал",
+					"text" : "Объявлена программа IV Международного арктического форума «Арктика — территория диалога», который пройдет 29—30 марта 2017 года в Архангельске."
+				},
+				{
+					"boxClass" : "material material--grid",
+					"img" : "test",
+					"imgClass" : "material__img--full",
+					"title" : "Арктика — территория диалога",
+					"category" : "Человеческий капитал",
+					"text" : "Объявлена программа IV Международного арктического форума «Арктика — территория диалога», который пройдет 29—30 марта 2017 года в Архангельске."
+				},
+				{
+					"boxClass" : "material material--grid",
+					"img" : "test",
+					"imgClass" : "material__img--full",
+					"title" : "Арктика — территория диалога",
+					"category" : "Человеческий капитал",
+					"text" : "Объявлена программа IV Международного арктического форума «Арктика — территория диалога», который пройдет 29—30 марта 2017 года в Архангельске.Объявлена программа IV Международного арктического форума «Арктика — территория диалога», который пройдет 29—30 марта 2017 года в Архангельске."
+				},
+				{
+					"boxClass" : "material material--grid",
+					"img" : "test",
+					"imgClass" : "material__img--full",
+					"title" : "Ядерная энергетика — ядро экономики",
+					"category" : "Человеческий капитал",
+					"text" : "Объявлена программа IV Международного арктического форума «Арктика — территория диалога», который пройдет 29—30 марта 2017 года в Архангельске."
+				},
+				{
+					"boxClass" : "material material--grid",
+					"img" : "test",
+					"imgClass" : "material__img--full",
+					"title" : "Арктика — территория диалога",
+					"category" : "Человеческий капитал",
+					"text" : "Объявлена программа IV Международного арктического форума «Арктика — территория диалога», который пройдет 29—30 марта 2017 года в Архангельске."
+				}
+			]
+		},
+		{
+			"title" : "Спикеры и авторы",
+			"counter" : "18 спикеров",
+		  	"type":"speakers",
+			"materials" : 
+			[
+				{
+					"boxClass" : "material material--grid",
+					"img" : "speaker",
+					"imgClass" : "material__img--vertical",
+					"title" : "Силуанов Антон Германович",
+					"category" : "Председатель правления",
+					"text" : ""
+				},
+				{
+					"boxClass" : "material material--grid",
+					"img" : "speaker",
+					"imgClass" : "material__img--vertical",
+					"title" : "Майкл Мурдок",
+					"category" : "Председатель управления",
+					"text" : ""
+				},
+				{
+					"boxClass" : "material material--grid",
+					"img" : "speaker",
+					"imgClass" : "material__img--vertical",
+					"title" : "Герман Греф",
+					"category" : "Глава Сбербанка",
+					"text" : ""
+				},
+				{
+					"boxClass" : "material material--grid",
+					"img" : "speaker",
+					"imgClass" : "material__img--vertical",
+					"title" : "Силуанов Антон Германович",
+					"category" : "Председатель правления",
+					"text" : ""
+				},
+				{
+					"boxClass" : "material material--grid",
+					"img" : "speaker",
+					"imgClass" : "material__img--vertical",
+					"title" : "Майкл Мурдок",
+					"category" : "Председатель управления",
+					"text" : ""
+				},
+				{
+					"boxClass" : "material material--grid",
+					"img" : "speaker",
+					"imgClass" : "material__img--vertical",
+					"title" : "Герман Греф",
+					"category" : "Глава Сбербанка",
+					"text" : ""
+				}
+			]
+		}
+	]
+}

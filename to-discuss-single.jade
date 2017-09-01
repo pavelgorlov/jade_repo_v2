@@ -1,0 +1,92 @@
+extends _layouts/with-sidebar
+
+block head_end
+    link(rel="stylesheet" href="assets/css/style.css") 
+block sidebar
+    .material-side
+        .material-side__block
+            img.material-side__img(src="assets/img/test.png")
+        .material-side__block
+            .material-side__heading О материале
+            ul.material-side__list
+                li.material-side__list-item
+                    span.material-side__text Дата проведения: 12 янв 2017
+                li.material-side__list-item
+                    span.material-side__text Форум: 
+                    a(href="").link.link--sm Арктика
+                li.material-side__list-item
+                    span.material-side__text Начало: 
+                    a(href="").link.link--sm !0:30 (МСК)
+        .material-side__block
+            .material-side__heading Модераторы
+            ul.material-side__list
+                li.material-side__list-item
+                    img(src="assets/img/avatar.png").material-side__avatar
+                    a(href="speaker.html").link.link--sm Ерохин В.П.
+                li.material-side__list-item
+                    img(src="assets/img/avatar.png").material-side__avatar
+                    a(href="speaker.html").link.link--sm Парфёнова Л.Д.
+        .material-side__block
+            .material-side__heading Спикеры
+            ul.material-side__list
+                li.material-side__list-item
+                    a(href="").link.link--sm Анютин Ю.Н.
+                li.material-side__list-item
+                    a(href="").link.link--sm Борисов С.Е.            
+        .material-side__block.material-side__block--border
+            .material-side__heading Материалы
+            p.material-side__text Страница мероприятия
+            a(href="").link.link--sm Скачать PDF (RU)
+        .material-side__block.material-side__block--border
+            .material-side__heading Источник
+            a(href="").link.link--sm www.roscongress.com/en/20301.html       
+block content
+    article.material.material--single
+        .material__head
+            .material__img
+                img(src="assets/img/test.png")
+            ul.material__list
+                li.material__list-item
+                    .material__list-key Дата выхода материала:
+                    .material__list-value 01.08.2016
+                li.material__list-item
+                    .material__list-key Источник:
+                    .material__list-value 
+                        a(href="").link.link--sm McKinsey Global Institute 
+        .material__content
+                h3.material__title Представлена деловая программа IV Международного арктического форума «Арктика — территория диалога»
+                p.material__descr.material__descr--border Объявлена программа IV Международного арктического форума «Арктика — территория диалога», который пройдет 29—30 марта 2017 года в Архангельске.
+                .material__text
+                    p 29-30 марта 2017 года в Архангельске состоялся IV Международный арктический форум «Арктика — территория диалога». Мероприятие прошло при поддержке Государственной комиссии по вопросам развития Арктики. Форум регулярно проводится с 2010 года и является крупнейшей площадкой для совместного обсуждения с зарубежными партнерами актуальных проблем и перспектив Арктического региона.
+                    p Форум собрал на своей площадке более 2400 участников, в том числе 468 представителей средств массовой информации из России и 31 страны мира: Австралии, Австрии, Бельгии, Великобритании, Вьетнама, Германии, Гренландии, Дании, Индии, Ирландии, Исландии, Испании, Италии, Канады, Кении, Кипра, Китая, Люксембурга, Нидерландов, Норвегии, Польши, Республики Абхазия, Республики Корея, Сингапура, США, Фарерских островов, Финляндии, Франции, Швейцарии, Швеции, Японии.
+                    .material__inner-heading Цитаты
+                    each quote in quotes
+                        .material__quote
+                            .material__quote-text #{quote.text}
+                            .material__quote-author #{quote.author}
+    .material-side.material-side--mobile
+        .material-side__block
+            .material-side__heading Авторы
+            ul.material-side__list
+                li.material-side__list-item
+                    a(href="speaker.html").link.link--sm Ерохин В.П.
+                li.material-side__list-item
+                    a(href="speaker.html").link.link--sm Парфёнова Л.Д.
+        .material-side__block
+            .material-side__heading Темы
+            ul.material-side__list
+                li.material-side__list-item.material-side__list-item--divided
+                    a(href="").link.link--sm Т-технологии
+                li.material-side__list-item.material-side__list-item--divided
+                    a(href="").link.link--sm Большие данные
+                li.material-side__list-item.material-side__list-item--divided
+                    a(href="").link.link--sm Большие данные
+                li.material-side__list-item.material-side__list-item--divided
+                    a(href="").link.link--sm Большие данные
+                li.material-side__list-item.material-side__list-item--divided
+                    a(href="").link.link--sm Международное сотрудничество
+        .material-side__block.material-side__block--border
+            .material-side__heading Полный текст материала
+            a(href="").link.link--sm www.roscongress.com/en/20301.html    
+block body_end
+    script(type="text/javascript" src="assets/js/script.js")

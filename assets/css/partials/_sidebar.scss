@@ -1,0 +1,20 @@
+.sidebar {
+	float: left;
+	width: rem(255);
+}
+
+.main-content {
+	margin-left: rem(295);
+	margin-bottom: rem(35);
+}
+
+@media (max-width: 1100px) {
+
+	.main-content {
+		margin-left: 0;
+	}
+
+	.sidebar {
+		width: 100%;
+	}
+}

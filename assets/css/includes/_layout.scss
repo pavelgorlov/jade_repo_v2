@@ -1,0 +1,21 @@
+@import "susy";
+
+$layout: (
+  columns: 3,
+  gutters: 0.1,
+  container: 1280px,
+  math: fluid,
+  global-box-sizing: border-box
+);
+
+$fcols: (
+  columns: 5,
+  gutters: 0.1,
+  container: 1280px,
+  math: fluid,
+  global-box-sizing: border-box
+);
+
+.container {
+  @include layout($layout);
+}

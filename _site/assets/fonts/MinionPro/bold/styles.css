@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'MinionProBold';
+  src: url('MinionPro-Bold.eot?#iefix') format('embedded-opentype'),  url('MinionPro-Bold.otf')  format('opentype'),
+	     url('MinionPro-Bold.woff') format('woff'), url('MinionPro-Bold.ttf')  format('truetype'), url('MinionPro-Bold.svg#MinionPro-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

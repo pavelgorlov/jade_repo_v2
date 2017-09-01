@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'GloberLightItalic';
+  src: url('GloberLightItalic.eot?#iefix') format('embedded-opentype'),  url('GloberLightItalic.otf')  format('opentype'),
+	     url('GloberLightItalic.woff') format('woff'), url('GloberLightItalic.ttf')  format('truetype'), url('GloberLightItalic.svg#GloberLightItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

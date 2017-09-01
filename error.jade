@@ -1,0 +1,16 @@
+extends _layouts/with-sidebar
+
+block head_end
+    link(rel="stylesheet" href="assets/css/style.css") 
+
+block sidebar
+    img(src="./assets/img/404.png").error__img
+block content
+    .error
+        h1.main-heading.error__title Такой страницы не существует
+        p.error__text Вероятно, вы ошиблись при вводе адреса в строке браузера, ли перешли по устаревшей ссылке
+        span.error__tooltip Попробуйте найти нужную вам страницу
+        .search.search--full.error__search
+            input(type="text").input.input--search.input--full
+block body_end
+    script(type="text/javascript" src="assets/js/script.js")

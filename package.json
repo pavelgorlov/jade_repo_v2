@@ -1,0 +1,35 @@
+{
+  "name": "Roskongress",
+  "version": "0.1.0",
+  "main": "gulpfile.js",
+  "author": {
+    "name": "Nick Volkov",
+    "email": "nick.volkov@gmail.com"
+  },
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.9.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-data": "^1.2.0",
+    "gulp-jade": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "susy": "^2.2.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://nick.volkov@gitlab.com/nick.volkov/roskongress.git"
+  },
+  "keywords": [
+    "jade",
+    "gulp",
+    "sass",
+    "browsersync"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4"
+  }
+}

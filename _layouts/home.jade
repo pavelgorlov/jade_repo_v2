@@ -1,0 +1,22 @@
+doctype html
+html
+	head
+		title= title
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
+		block head_end
+	
+	body
+		include ../_partials/side-menu
+		.container
+			include ../_partials/header
+		.container-wrapper
+			.container
+				include ../_partials/filters
+		.container
+			.wrapper
+				block content
+		include ../_partials/footer
+		script(type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+		script(type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous")
+		block body_end

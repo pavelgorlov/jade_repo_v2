@@ -1,0 +1,102 @@
+mixin generate(material, data)
+    each block in data
+        article.material.material--grid
+                .material__img(class="#{block.imgClass}")
+                    img(src="assets/img/#{block.img}.png" alt="#{block.title}")
+            .material__content
+                a(href="")
+                    h3.material__title #{block.title}
+                a.link.link--sm(href="")
+                    span.material__category #{block.category}
+                    span.material__date #{block.date}
+                p.material__text #{block.text}
+
+extends _layouts/main
+
+block head_end
+    link(rel="stylesheet" href="assets/css/style.css")
+
+block content
+    article.material.material--speaker
+        .material__img(class="#{imgClass}")
+            img(src="assets/img/#{avatar}.png" alt="#{name}")
+        .material__content
+            h1.material__title #{name}
+            .material__descr #{position}
+            .material__text
+                each p in bio
+                    p #{p}
+    ul.acc
+      li.acc__row.acc__row--active
+        .acc__button События
+        .acc__content
+          each block in events
+            article.material.material--grid
+              .material__img(class="#{block.imgClass}")
+                img(src="assets/img/#{block.img}.png" alt="#{block.title}")
+              .material__content
+                a(href="")
+                  h3.material__title #{block.title}
+                a.link.link--sm(href="")
+                  span Cостоится
+                  span.material__date #{block.date}
+                p.material__text #{block.text}
+      li.acc__row
+        .acc__button Материалы
+        .acc__content
+            each block in materials
+              article.material.material--grid
+                .material__img(class="#{block.imgClass}")
+                  img(src="assets/img/#{block.img}.png" alt="#{block.title}")
+                .material__content
+                  a(href="")
+                    h3.material__title #{block.title}
+                  a.link.link--sm(href="")
+                    span.material__category #{block.category}
+                  p.material__text #{block.text}
+      li.acc__row
+        .acc__button Цитаты
+        .acc__content
+            each block in quotes
+              article.material.material--grid
+                .material__content
+                  p.material__text #{block.text}
+                  a.link.link--sm(href="")
+                    span.material__category._right-aligned #{block.category}
+    .tabs
+        ul.tabs__list
+            li.tabs__button.active События <span class="tabs__counter">(#{events.length})</span>
+            li.tabs__button Материалы <span class="tabs__counter">(#{materials.length})</span>
+            li.tabs__button Цитаты <span class="tabs__counter">(#{quotes.length})</span>
+        .tabs__content.active
+            each block in events
+                article.material.material--grid
+                    .material__img(class="#{block.imgClass}")
+                        img(src="assets/img/#{block.img}.png" alt="#{block.title}")
+                    .material__content
+                        a(href="")
+                            h3.material__title #{block.title}
+                        a.link.link--sm(href="")
+                            span Cостоится
+                            span.material__date #{block.date}
+                        p.material__text #{block.text}
+        .tabs__content
+            each block in materials
+                article.material.material--grid
+                    .material__img(class="#{block.imgClass}")
+                        img(src="assets/img/#{block.img}.png" alt="#{block.title}")
+                    .material__content
+                        a(href="")
+                            h3.material__title #{block.title}
+                        a.link.link--sm(href="")
+                            span.material__category #{block.category}
+                        p.material__text #{block.text}
+        .tabs__content
+            each block in quotes
+                article.material.material--grid
+                    .material__content
+                        p.material__text #{block.text}
+                        a.link.link--sm(href="")
+                            span.material__category._right-aligned #{block.category}
+block body_end
+    script(type="text/javascript" src="assets/js/script.js")

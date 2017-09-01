@@ -1,0 +1,168 @@
+.container-wrapper {
+	background-image: url("../img/chart-circles.jpg");
+	position: relative;
+	background-size: cover;
+	background-color: #0000AA;
+}
+
+.filters {
+	padding-top: rem(15);
+	@include layout($layout);
+	@include clearfix;
+	position: relative;
+	height: rem(574);
+  	overflow: hidden;
+
+  	* {
+		//outline: 1px solid rgba(0,0,0,0.1);
+	}
+
+	.btn {
+		position: absolute;
+		left: 62.625%;
+		bottom: rem(14);	
+	}
+
+	&--mobile {
+		//background-color: $blue;
+
+		&__categories {
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 rem(14);
+			border-right: rem(1) solid #B3B3B3;
+		}
+
+		&__nav:after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+	}
+
+  	.categories-list__item{
+		padding: rem(17) 0;
+
+  	}
+
+  	.categories-list__item-heading,
+  	.categories-list__item-counter {
+	  	color: #fff;
+	  	font-family: 'CambriaRegular';
+	}
+}
+
+.graphic-filter {
+  @include span(2 last);
+
+	.graph {
+		height: rem(464);
+		background-image: url("../img/graphs.png");
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.search {
+		width: rem(369);
+		margin-bottom: rem(29);
+	}
+}
+
+.text-filter {
+  @include span(1);
+
+}
+
+.project-descr {
+
+	h1 {
+		font-family: 'Cambria';
+	  	font-weight: bold;
+		font-size: rem(24.5);
+		padding-bottom: rem(14);
+	 	padding-top: rem(25);
+		color: #fff;
+		left: rem(-1);
+		position: relative;
+	}
+
+	p {
+		//max-width: rem(299);
+		font-size: rem(14.1);
+	  	line-height: rem(18.5);
+		margin-bottom: rem(25);
+	  	font-family: 'CambriaRegular';
+	  	color: #fff;
+	}
+
+	&--mobile {
+		background-image: url("../../assets/img/mobile-about.png");
+		background-color: $red;
+		background-position: center;
+		background-repeat: no-repeat;
+		padding: rem(25) 0 rem(49) rem(240);
+		background-size: 125%;
+
+		p, h1, a {
+			color: #fff;
+		}
+
+		p {
+			font-size: rem(17);
+			max-width: rem(99999);
+			padding-right: rem(4);
+		}
+
+		h1 {
+			font-size: rem(31);
+		}
+	}
+}
+
+.mobile-container {
+	display: none;
+	//padding: rem(9);
+}
+
+@media (max-width: 1279px) {
+    
+    .graphic-filter {
+		display: none;
+	}
+
+	.text-filter {
+		width: 100%;
+	}
+
+    .project-descr h1 {
+		margin-bottom: rem(19);
+	}
+}
+
+@media (max-width: 899px) {
+	.filters {
+		display: none;
+	}
+
+	.mobile-container {
+		display: block;
+		margin: 0 -54px -30px -54px;
+	}
+
+	.project-descr--mobile {
+		background-size: 100%;
+		background-position: -10vw center;
+	}
+
+}
+
+@media (max-width: 639px) {
+	.mobile-container {
+		margin: 0 rem(-15) !important;
+	}
+
+	.project-descr--mobile {
+		background-image: none;
+		padding-left: rem(15)
+	}
+}

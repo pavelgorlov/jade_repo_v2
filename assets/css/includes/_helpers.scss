@@ -1,0 +1,87 @@
+$browser-context: 14;
+
+@function rem($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+._left-aligned {
+	float: left;
+}
+
+._right-aligned {
+	float: right;
+}
+
+._center-aligned {
+  text-align: center;
+}
+
+._bg-fluid {
+  position: relative;
+
+  &:before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    width: 200vw;
+    height: 100%;
+    background-color: inherit;
+  }
+}
+
+._fixed-ratio {
+  position: relative;
+  padding-top: 54.05%;
+}
+
+._side-panel {
+  z-index: 1010;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: rem(480);
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+
+  &.active {
+    transform: translateX(0);
+
+    & + .container {
+      overflow: hidden;
+    }
+  }
+}
+
+._highlight {
+  background-color: #E8D698;
+}

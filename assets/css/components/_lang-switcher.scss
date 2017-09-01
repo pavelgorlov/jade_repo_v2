@@ -1,0 +1,22 @@
+.lang-switcher,
+.lang-switcher__button {
+	display: inline-block;
+}
+
+.lang-switcher__button {
+	text-transform: uppercase;
+	padding: rem(8);
+	color: $grey;
+	font-family: 'GloberLight';
+	font-weight: 300;
+
+	&.active {
+		border: rem(1) solid $grey;
+		color: #000;
+	}
+
+	span {
+		position: relative;
+		top: rem(3);
+	}
+}

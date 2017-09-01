@@ -1,0 +1,51 @@
+.tabs {
+	margin-top: rem(30);
+}
+
+.tabs__list {
+	border-bottom: rem(1) solid #b3b3b3;
+}
+
+.tabs__button {
+	display: inline-block;
+	padding: rem(15);
+	font-size: rem(24);
+	color: $grey;
+	position: relative;
+	cursor: pointer;
+
+	&.active {
+		color: black;
+		border-top: rem(1) solid #b3b3b3;
+		border-left: rem(1) solid #b3b3b3;
+		border-right: rem(1) solid #b3b3b3;
+
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: rem(1);
+			left: 0;
+			bottom: rem(-1);
+			background-color: #fff;
+		}
+	}
+}
+
+.tabs__counter {
+	font-family: 'CalibriLightItalic';
+	.active & {
+		color: $red;
+	}
+}
+
+.tabs__content {
+	display: none;
+	padding: rem(30) 0;
+	@include clearfix;
+
+	&.active {
+		display: block;
+	}
+}

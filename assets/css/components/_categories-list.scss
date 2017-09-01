@@ -1,0 +1,197 @@
+.categories {
+	height: rem(264) !important;
+	width: auto !important;
+}
+
+.categories-list {
+	max-width: rem(300);
+	margin-top: rem(25);
+
+	.filters--mobile &,
+	.key-themes & {
+		margin: 0;
+		width: auto;
+	}
+}
+
+.categories-list__item {
+	padding: rem(20) 0;
+	border-top: 1px solid #F3F3F5;
+
+	.filters--mobile & {
+		border: none;
+		text-align: center;
+	}
+
+	.key-themes & {
+		border: none;
+	}
+}
+
+.categories-list__item-heading {
+	font-size: rem(24);
+	color: $blue;
+	margin-bottom: rem(5);
+
+	.filters--mobile &,
+	.key-themes & {
+		color: #fff;
+	}
+
+	.key-themes & {
+		text-decoration: underline;
+	}
+}
+
+.categories-list__item-counter {
+	color: $red;
+
+	.filters--mobile &,
+	.key-themes & {
+		color: #B3B3B3;
+	}
+
+	.key-themes & {
+		font-size: rem(24);
+	}
+}
+
+.categories__item {
+	display: block;	
+	width: rem(160);
+	height: rem(160);
+	padding: rem(20);
+	background-color: #F3F3F5;
+	border-radius: 50%;
+	vertical-align: top;
+	margin: rem(40) 0;
+
+	.key-themes & {
+		margin: 0;
+	}
+}
+
+.categories__icon {
+	display: block;
+
+	&--small {
+		width: rem(50);
+		height: rem(50);
+		margin: 0 auto;
+		background-size: cover;
+	}
+
+	&--big {
+		width: rem(80);
+		height: rem(80);
+		margin: 0 auto;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&--pmef {
+		background-image: url("../../assets/img/pmef.png");
+	}
+
+	&--mfk {
+		background-image: url("../../assets/img/mfk.png");
+	}
+
+	&--vef {
+		background-image: url("../../assets/img/vef.png");
+	}
+
+	&--sochi {
+		background-image: url("../../assets/img/sochi.png");
+	}
+
+	&--arktika {
+		background-image: url("../../assets/img/arktika.png");
+	}
+
+	&--geo {
+		background-image: url("../../assets/img/fields/geo-b.svg");
+	}
+
+	&--gos {
+		background-image: url("../../assets/img/fields/gos-b.svg");
+	}
+
+	&--inv {
+		background-image: url("../../assets/img/fields/inv-b.svg");
+	}
+
+	&--cul {
+		background-image: url("../../assets/img/fields/cul-b.svg");
+	}
+
+	&--sci {
+		background-image: url("../../assets/img/fields/sci-b.svg");
+	}
+
+	&--geo {
+		background-image: url("../../assets/img/fields/geo-b.svg");
+	}
+
+	&--apk {
+		background-image: url("../../assets/img/fields/apk-b.svg");
+	}
+
+	&--ter {
+		background-image: url("../../assets/img/fields/ter-b.svg");
+	}
+
+	&--grow {
+		background-image: url("../../assets/img/fields/grow-b.svg");
+	}
+
+	&--fin {
+		background-image: url("../../assets/img/fields/fin-b.svg");
+	}
+
+	&--trans {
+		background-image: url("../../assets/img/fields/trans.svg");
+	}
+
+	&--cap {
+		background-image: url("../../assets/img/fields/cap-b.svg");
+	}
+}
+
+.categories__descr {
+	text-align: center;
+	margin-top: rem(10);
+	font-size: rem(16);
+	color: $blue;
+	line-height: 1.2;
+}
+
+.categories__span {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-family: 'Cambria';
+  	font-style: italic;
+
+	&--back {
+		&:before {
+			content: '←';
+			padding-right: rem(5);	
+		}
+	}
+
+	&--forward {
+		&:after {
+		content: '→';
+		padding-left: rem(5);}	
+	}
+}
+
+@media (max-width: 1280px) {
+
+	.categories-list {
+		max-width: 100%;
+	}
+}

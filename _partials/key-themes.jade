@@ -1,0 +1,25 @@
+.mobile-container
+    .key-themes
+        a(href="/").key-themes__back
+        aside.key-themes__aside
+            .categories__item
+                i.categories__icon.categories__icon--sci.categories__icon--small
+                p.categories__descr Культура <br> и общество
+            ul.categories-list
+                li.categories-list__item
+                    a.categories-list__item-heading Аналитика
+                    .categories-list__item-counter 94
+                li.categories-list__item
+                    a.categories-list__item-heading Мероприятия
+                    .categories-list__item-counter 36
+                li.categories-list__item
+                    a.categories-list__item-heading Спикеры
+                    .categories-list__item-counter 18
+        ul.key-themes__list
+            each theme in themes
+                li.key-themes__theme 
+                    span #{theme.name}
+                    ul.key-themes__sub-list
+                        each subtheme in theme.subthemes
+                            li.key-themes__subtheme 
+                                a(href="/fields-of-knowledge-single.html") #{subtheme.name}

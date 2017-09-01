@@ -1,0 +1,73 @@
+extends _layouts/with-sidebar
+
+block head_end
+    link(rel="stylesheet" href="assets/css/style.css")
+    link(rel="stylesheet" href="assets/css/select2.min.css")
+block sidebar
+    .side-filters
+        div.side-filters__wrapper
+            .side-filters__select-wrapper
+                select.side-filters__filter.side-filters__filter--select.btn(data-filter="forum")
+                    option
+                    option(value="1") 1
+                    option(value="1") 2
+                    option(value="1") 3
+                select.side-filters__filter.side-filters__filter--select.btn(data-filter="theme")
+                    option
+                    option(value="1") 1
+                    option(value="1") 2
+                    option(value="1") 3
+                select.side-filters__filter.side-filters__filter--select.btn(data-filter="year")
+                    option
+                    option(value="1") 1
+                    option(value="1") 2
+                    option(value="1") 3
+                select.side-filters__filter.side-filters__filter--select.btn(data-filter="author")
+                    option
+                    option(value="1") 1
+                    option(value="1") 2
+                    option(value="1") 3
+            .side-filters__counter
+                span Всего <b>23 452</b> мероприятия
+        .side-filters__wrapper
+            .chosen__heading
+                span Выбраны
+                .chosen__line
+            .side-filters__chosen.chosen
+                ul.chosen__list
+                    li.chosen__item
+                        .chosen__name._left-aligned Ерохин Виктор Владимирович
+                        .chosen__close._right-aligned
+                    li.chosen__item
+                        .chosen__name._left-aligned Ерохин Виктор Владимирович
+                        .chosen__close._right-aligned
+                    li.chosen__item
+                        .chosen__name._left-aligned Ерохин Виктор Владимирович
+                        .chosen__close._right-aligned
+                .chosen__discard
+                    a.link.link--sm Сбросить все
+            .side-filters__counter(style="margin-top: 1em")
+                span Отобрано <b>23 452</b> материалов
+                a.link.link--sm Сбросить фильтр
+block content
+    each material in materials
+        article.material.material--full
+            .material__img(class="#{material.imgClass}")
+                img(src="assets/img/#{material.img}.png" alt="#{material.title}")
+            .material__content
+                a(href="")
+                    span.material__date.material__date--indicator #{material.date}
+                a(href="to-discuss-single.html")
+                    h3.material__title #{material.title}
+                a(href="")
+                    p.material__descr #{material.thesis}
+                a(href="")
+                    p.material__text #{material.text}
+                each category in material.categories
+                        a(href="").link.link--sm
+                            span.material__category #{category}
+    .material__more
+            a(href="").link.link--lg Показать больше
+block body_end
+    script(type="text/javascript" src="assets/js/select2.full.min.js")
+    script(type="text/javascript" src="assets/js/script.js")

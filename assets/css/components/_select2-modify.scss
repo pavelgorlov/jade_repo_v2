@@ -1,0 +1,66 @@
+.select2-container {
+	width: 100% !important;
+	outline: none;
+	border-radius: rem(50) !important;
+	border: none;
+	margin-bottom: rem(15) !important;
+}
+
+.select2-selection {
+	font-family: 'Calibri';
+	background-color: inherit !important;
+	border: rem(1) solid #b3b3b3 !important;
+	border-radius: rem(50) !important;
+	height: rem(34) !important;
+}
+
+.select2-selection__rendered {
+	color: inherit !important;
+	line-height: rem(34) !important;
+	padding-right: rem(34) !important;
+	padding-left: rem(15) !important;
+}
+
+.select2-selection__arrow {
+	height: rem(34) !important;
+	background-image: url("../img/arrow-bottom.png");
+	background-position: left center;
+	background-repeat: no-repeat;
+	width: rem(34) !important;
+
+	b {
+		display: none;	
+	}
+
+	.select2-selection--single[aria-expanded="true"] & {
+		z-index: 10000;
+	}
+}
+
+.select2-selection__clear {
+	position: absolute !important;
+	right: 0;
+	background-image: url("../img/cross.png");
+	color: transparent;
+	background-position: left center;
+	background-repeat: no-repeat;
+	width: rem(34) !important;
+	height: rem(30) !important;
+}
+
+.select2-selection__placeholder {
+	color: inherit !important;
+
+	.select2-selection--single[aria-expanded="true"] & {
+		position: relative;
+		z-index: 10000;
+	}
+}
+
+.select2-search--dropdown {
+	margin-top: rem(15);
+}
+
+.select2-dropdown--below {
+	margin-top: -rem(15);
+}

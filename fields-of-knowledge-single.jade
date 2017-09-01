@@ -1,0 +1,126 @@
+extends _layouts/footer-only
+
+block head_end
+  link(rel="stylesheet" href="assets/css/style.css")
+
+block content
+  .field
+    .field__head
+      .field__heading #{heading}
+      img.field__img(src="assets/img/#{img}.png")
+      p.field__text #{text}
+    //- .field__connected.connected
+    //- 	.connected__heading Связанные области
+    //- 	ul.connected__list
+    //- 		each field in connectedFields
+    //- 			li.connected__field
+    //- 				a(href="/key-themes.html").connected__name #{field.name}
+    //- 				span.connected__counter #{field.counter}
+    ul.acc
+      li.acc__row.acc__row--active
+        .acc__button События
+        .acc__content
+          each block in events
+            article.material.material--grid
+              .material__img(class="#{block.imgClass}")
+                img(src="assets/img/#{block.img}.png" alt="#{block.title}")
+              .material__content
+                a(href="")
+                  h3.material__title #{block.title}
+                a.link.link--sm(href="")
+                  span Cостоится
+                  span.material__date #{block.date}
+                p.material__text #{block.text}
+      li.acc__row
+        .acc__button Материалы
+        .acc__content
+            each block in materials
+              article.material.material--grid
+                .material__img(class="#{block.imgClass}")
+                  img(src="assets/img/#{block.img}.png" alt="#{block.title}")
+                .material__content
+                  a(href="")
+                    h3.material__title #{block.title}
+                  a.link.link--sm(href="")
+                    span.material__category #{block.category}
+                  p.material__text #{block.text}
+      li.acc__row
+        .acc__button Цитаты
+        .acc__content
+            each block in quotes
+              article.material.material--grid
+                .material__content
+                  p.material__text #{block.text}
+                  a.link.link--sm(href="")
+                    span.material__category._right-aligned #{block.category}
+      li.acc__row
+        .acc__button Связанные темы
+        .acc__content
+          ul.acc__sub
+            each block in connectedFields
+              li.acc__row
+                .acc__button #{block.name}
+                .acc__content
+                  ul.acc__list
+                    li.acc__list-item
+                      span._left-aligned Материалы
+                      span._right-aligned #{block.materials}
+                    li.acc__list-item
+                      span._left-aligned Мероприятия
+                      span._right-aligned #{block.events}
+                    li.acc__list-item
+                      span._left-aligned Спикеры и Авторы
+                      span._right-aligned #{block.speakers}
+    .tabs
+      ul.tabs__list
+        li.tabs__button.active События <span class="tabs__counter">(#{events.length})</span>
+        li.tabs__button Материалы <span class="tabs__counter">(#{materials.length})</span>
+        li.tabs__button Цитаты <span class="tabs__counter">(#{quotes.length})</span>
+        li.tabs__button Связанные темы <span class="tabs__counter">(#{connectedFields.length})</span>
+      .tabs__content.active
+        each block in events
+          article.material.material--grid
+            .material__img(class="#{block.imgClass}")
+              img(src="assets/img/#{block.img}.png" alt="#{block.title}")
+            .material__content
+              a(href="")
+                h3.material__title #{block.title}
+              a.link.link--sm(href="")
+                span Cостоится
+                span.material__date #{block.date}
+              p.material__text #{block.text}
+      .tabs__content
+        each block in materials
+          article.material.material--grid
+            .material__img(class="#{block.imgClass}")
+              img(src="assets/img/#{block.img}.png" alt="#{block.title}")
+            .material__content
+              a(href="")
+                h3.material__title #{block.title}
+              a.link.link--sm(href="")
+                span.material__category #{block.category}
+              p.material__text #{block.text}
+      .tabs__content
+        each block in quotes
+          article.material.material--grid
+            .material__content
+              p.material__text #{block.text}
+              a.link.link--sm(href="")
+                span.material__category._right-aligned #{block.category}
+      .tabs__content
+        table.table
+          thead
+            th Связанные с темой "Инновационная инфраструктура" материалы, мероприятия, спикеры и авторы по следующим темам
+            th Материалы
+            th Мероприятия
+            th Спикеры и авторы
+          tbody
+            each block in connectedFields
+              tr
+                td #{block.name}
+                td #{block.materials}
+                td #{block.events}
+                td #{block.speakers}
+block body_end
+  script(type="text/javascript" src="assets/js/script.js")
+  script(type="text/javascript" src="assets/js/fields.js")

@@ -1,0 +1,66 @@
+.forums {
+	@include layout($fcols);
+	@include clearfix;
+}
+
+.forums__forum {
+	@include span(1)
+
+	&:last-child {
+		@include span(1 last);
+	}
+}
+
+.forums__img {
+	text-align: center;
+	height: rem(200);
+	white-space: nowrap;
+	padding: rem(30) 0;
+	margin-bottom: rem(30);
+
+	&:before {
+	  content: '';
+	  display: inline-block;
+	  height: 100%;
+	  vertical-align: middle;
+	  margin-right: -0.25em;
+	}
+
+	img {
+		display: inline-block;
+  		vertical-align: middle;
+	}
+}
+
+.forums__content {
+	padding: rem(30) 0;
+	background-color: $light-grey;
+}
+
+.forums__title {
+	font-family: 'MinionProRegular';
+	font-size: rem(24);
+	text-align: center;
+	margin-bottom: rem(10);
+}
+
+.forums__text {
+	font-family: 'Calibri';
+	margin-bottom: rem(20);
+
+	p {
+		margin-bottom: rem(15);
+	}
+
+	& + .link {
+		font-size: rem(14);
+	}
+}
+
+@media (max-width: 1100px) {
+	
+	.forums__forum,
+	.forums__forum:last-child {
+		@include span(full);
+	}
+}

@@ -1,0 +1,51 @@
+extends _layouts/narrow
+
+block head_end
+    link(rel="stylesheet" href="assets/css/style.css") 
+
+block content
+    .search.search--full
+        input(type="text").input.input--search.input--full
+    ul.search-filters
+        li.search-filters__filter.active
+            div
+                span.search-filters__key Всего: 
+                span.search-filters__value 23 реузльтата
+        li.search-filters__filter
+            span.search-filters__key Аналитика: 
+            span.search-filters__value 23
+        li.search-filters__filter
+            span.search-filters__key Мероприятия: 
+            span.search-filters__value 23
+        li.search-filters__filter
+            span.search-filters__key Спикеры: 
+            span.search-filters__value 23
+        li.search-filters__filter
+            span.search-filters__key Цитаты: 
+            span.search-filters__value 23                
+    each material in materials
+        article.material.material--searched
+            .material__counter 
+                    span #{material.counter}
+            .material__content
+                a(href="")
+                    h3.material__title #{material.title}
+                a(href="")
+                    p.material__text #{material.text}
+                a(href="")
+                    span.material__type #{material.type}
+                ul.material__list
+                    if material.type === 'Цитата'
+                        li.material__list-item
+                                span.material__list-key Форум: 
+                                a(href="")
+                                    span.material__list-value #{material.forum}
+                    li.material__list-item
+                        span.material__list-key Дата: 
+                        a(href="")
+                                span.material__list-value #{material.date}
+                        
+    div.material__more                          
+        a(href="").link.link--lg Показать еще 9
+block body_end
+    script(type="text/javascript" src="assets/js/script.js")

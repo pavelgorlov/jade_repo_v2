@@ -1,0 +1,86 @@
+extends _layouts/home
+
+block head_end
+    link(rel="stylesheet" href="assets/css/style.css")
+    link(rel="stylesheet" href="assets/css/swiper.min.css") 
+
+block content
+    each section in sections
+        if section.type == "materials"
+            section.material-section._bg-fluid.materials
+                .material-section__top-line
+                    ._left-aligned
+                        h2.material-section__heading #{section.title}
+                        span.material-section__counter #{section.counter}
+                    ._right-aligned
+                        button(type="button").btn-go Перейти в раздел
+                            span.arrow-icon
+
+                div
+                    each material in section.materials
+                        article(class="#{material.boxClass}")
+                            .material__img(class="#{material.imgClass}")
+                                img(src="assets/img/#{material.img}.png" alt="#{material.title}" data-test="0")
+                            //.material__content
+                                a(href="")
+                                    h3.material__title #{material.title}
+                                a.link.link--sm(href="")
+                                    span.material__category #{material.category}
+                                a(href="")
+                                    p.material__text #{material.text}
+                div.material-section__more
+                    a(href="").link.link--lg Показать еще
+        //
+        if section.type == "events"
+            section.material-section._bg-fluid.events
+                .material-section__top-line
+                    ._left-aligned
+                        h2.material-section__heading #{section.title}
+                        span.material-section__counter #{section.counter}
+                    ._right-aligned
+                        button(type="button").btn-go Перейти в раздел
+                            span.arrow-icon
+
+                div
+                    each material in section.materials
+                        article(class="#{material.boxClass}")
+                            .material__img(class="#{material.imgClass}")
+                                img(src="assets/img/#{material.img}.png" alt="#{material.title}" data-test="0")
+                            .material__content
+                                a(href="#")
+                                    h3.material__title #{material.title}
+                                a.link.link--sm(href="#")
+                                    span.material__category #{material.category}
+                                //a(href="")
+                                    p.material__text #{material.text}
+                div.material-section__more
+                    a(href="").link.link--lg Показать еще
+        //
+        if section.type == "speakers"
+            section.material-section._bg-fluid.speakers
+                .material-section__top-line
+                    ._left-aligned
+                        h2.material-section__heading #{section.title}
+                        span.material-section__counter #{section.counter}
+                    ._right-aligned
+                        button(type="button").btn-go Перейти в раздел
+                            span.arrow-icon
+
+                div
+                    each material in section.materials
+                        article(class="#{material.boxClass}")
+                            .material__img(class="#{material.imgClass}")
+                                img(src="assets/img/#{material.img}.png" alt="#{material.title}" data-test="0")
+                            .material__content
+                                a(href="")
+                                    h3.material__title #{material.title}
+                                a.link.link--sm(href="")
+                                    span.material__category #{material.category}
+                                a(href="")
+                                    p.material__text #{material.text}
+                div.material-section__more
+                    a(href="").link.link--lg Показать еще
+
+block body_end
+    script(type="text/javascript" src="assets/js/swiper.jquery.min.js")
+    script(type="text/javascript" src="assets/js/script.js")
