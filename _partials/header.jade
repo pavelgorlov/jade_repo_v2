@@ -1,4 +1,4 @@
-header
+header#main-header
     //.top-line
         //._left-aligned
             a(href="/").logo--header
@@ -22,54 +22,58 @@ header
                     span ru
                 li.lang-switcher__button
                     span en
-    .main-nav._bg-fluid
 
-        if inner
-          //.main-nav__heading.main-nav__heading--back #{title}
-        else
-          //.main-nav__heading #{title}
 
-        .main-nav__left
-            a.brand-logo(href="#")
-                svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="roscongress-logo" x="0px" y="0px" viewBox="0 0 41 40" style="enable-background:new 0 0 40 40;" xml:space="preserve")
-                    g
-                        path(d="M0,17.4c0-5,4.1-9.1,9.1-9.1c5,0,9.1,4.1,9.1,9.1c0,0.6-0.1,1.1-0.2,1.7c-1.5-0.6-3.1-1-4.7-1 C8.9,18.1,5,20.5,2.8,24C1.1,22.3,0,20,0,17.4 M15.2,30.4c0-2.9,1-5.6,2.8-7.7c-1.4-0.8-3-1.3-4.7-1.3c-5,0-9.1,4.1-9.1,9.1 c0,5,4.1,9.1,9.1,9.1c1.7,0,3.4-0.5,4.7-1.3C16.3,36,15.2,33.3,15.2,30.4 M31.7,29.6c-4.4,0-8.3-2.4-10.4-5.9 c-1.8,1.7-2.9,4-2.9,6.6c0,5,4.1,9.1,9.1,9.1c5,0,9.1-4.1,9.1-9.1c0-0.6-0.1-1.1-0.2-1.7C34.9,29.3,33.3,29.6,31.7,29.6 M32.6,8.4 c0,0.2,0,0.5,0,0.7c0,5.7-4,10.5-9.3,11.9c1.4,3.3,4.6,5.6,8.4,5.6c5,0,9.1-4.1,9.1-9.1C40.7,12.7,37.1,8.8,32.6,8.4 M20.4,0 c-3.8,0-7,2.3-8.4,5.6c5.3,1.3,9.3,6.1,9.3,11.9c0,0.2,0,0.5,0,0.7c4.6-0.5,8.2-4.3,8.2-9C29.4,4.1,25.4,0,20.4,0" style="fill:#B60033")
-                span Информационно-аналитическая<br>система Фонда Росконгресс
+    .container
+        .main-nav._bg-fluid
 
-        ul.main-nav__list.main-nav__menu
-            //li.main-nav__button
-            //    a(href="/").btn.active Главная
-            li.main-nav__button.active
-                a(href="#") Темы
-            li.main-nav__button
-                a(href="in-focus.html") Материалы
-            li.main-nav__button
-                a(href="to-discuss.html") Мероприятия
-            li.main-nav__button
-                a(href="forums.html") Спикеры и авторы
-            li.marker
+            if inner
+              //.main-nav__heading.main-nav__heading--back #{title}
+            else
+              //.main-nav__heading #{title}
 
-        ul.main-nav__right
-            li.navbar-search
-                a(href="#search")
-                    svg(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="21px" viewBox="0 0 21 21" enable-background="new 0 0 21 21" xml:space="preserve")
-                        path(fill="#BAC0CA" d="M8.46,0.921c1.992,0,3.864,0.777,5.274,2.188c2.91,2.913,2.91,7.653,0,10.565c-1.41,1.411-3.282,2.188-5.274,2.188s-3.866-0.776-5.274-2.188c-2.909-2.912-2.909-7.652,0-10.565C4.594,1.698,6.468,0.921,8.46,0.921M8.46-0.079c-2.165,0-4.33,0.827-5.982,2.481c-3.304,3.308-3.304,8.671,0,11.979c1.652,1.653,3.817,2.48,5.982,2.48c2.166,0,4.329-0.827,5.981-2.48c3.305-3.308,3.305-8.671,0-11.979C12.789,0.749,10.625-0.079,8.46-0.079L8.46-0.079z")
-                        line(fill="none" stroke="#BAC0CA" stroke-miterlimit="10" x1="14.107" y1="14.137" x2="20.465" y2="20.503")
-            li.navbar-user
-                a(href="#profile")
-                    svg(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="23px" viewBox="0 0 18 23" enable-background="new 0 0 18 23" xml:space="preserve")
-                        path(fill="none" stroke="#BAC0CA" stroke-miterlimit="10" d="M10.42,12.5h-0.293c2.458,0,4.295-2.868,4.295-5.495c0-3.049-2.472-5.578-5.521-5.578s-5.52,2.559-5.52,5.607c0,2.627,1.837,5.466,4.295,5.466H7.215c-4.15,0-6.715,3.133-6.715,7.282V22.5h17v-2.718C17.5,15.633,14.57,12.5,10.42,12.5z")
-            li.lang-swith
-                a(href="#EN")
-                    i En
-            li.lang-swith.active
-                a(href="#Ru")
-                    i Ru
-            .main-nav__hamburger
-                div
-                div
-                div
+            .main-nav__left
+                a.brand-logo(href="#")
+                    svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="roscongress-logo" x="0px" y="0px" viewBox="0 0 41 40" style="enable-background:new 0 0 40 40;" xml:space="preserve")
+                        g
+                            path(d="M0,17.4c0-5,4.1-9.1,9.1-9.1c5,0,9.1,4.1,9.1,9.1c0,0.6-0.1,1.1-0.2,1.7c-1.5-0.6-3.1-1-4.7-1 C8.9,18.1,5,20.5,2.8,24C1.1,22.3,0,20,0,17.4 M15.2,30.4c0-2.9,1-5.6,2.8-7.7c-1.4-0.8-3-1.3-4.7-1.3c-5,0-9.1,4.1-9.1,9.1 c0,5,4.1,9.1,9.1,9.1c1.7,0,3.4-0.5,4.7-1.3C16.3,36,15.2,33.3,15.2,30.4 M31.7,29.6c-4.4,0-8.3-2.4-10.4-5.9 c-1.8,1.7-2.9,4-2.9,6.6c0,5,4.1,9.1,9.1,9.1c5,0,9.1-4.1,9.1-9.1c0-0.6-0.1-1.1-0.2-1.7C34.9,29.3,33.3,29.6,31.7,29.6 M32.6,8.4 c0,0.2,0,0.5,0,0.7c0,5.7-4,10.5-9.3,11.9c1.4,3.3,4.6,5.6,8.4,5.6c5,0,9.1-4.1,9.1-9.1C40.7,12.7,37.1,8.8,32.6,8.4 M20.4,0 c-3.8,0-7,2.3-8.4,5.6c5.3,1.3,9.3,6.1,9.3,11.9c0,0.2,0,0.5,0,0.7c4.6-0.5,8.2-4.3,8.2-9C29.4,4.1,25.4,0,20.4,0" style="fill:#B60033")
+                    span Информационно-аналитическая<br>система Фонда Росконгресс
 
+            ul.main-nav__list.main-nav__menu
+                //li.main-nav__button.active -- Класс активной ссылки
+                //    a(href="/") Главная
+                li.main-nav__button
+                    a(href="#") Темы
+                li.main-nav__button
+                    a(href="in-focus.html") Материалы
+                li.main-nav__button
+                    a(href="to-discuss.html") Мероприятия
+                li.main-nav__button
+                    a(href="forums.html") Спикеры и авторы
+                li.marker
+
+            ul.main-nav__right
+                li.navbar-search
+                    a(href="#search")
+                        svg(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="21px" viewBox="0 0 21 21" enable-background="new 0 0 21 21" xml:space="preserve")
+                            path(fill="#BAC0CA" d="M8.46,0.921c1.992,0,3.864,0.777,5.274,2.188c2.91,2.913,2.91,7.653,0,10.565c-1.41,1.411-3.282,2.188-5.274,2.188s-3.866-0.776-5.274-2.188c-2.909-2.912-2.909-7.652,0-10.565C4.594,1.698,6.468,0.921,8.46,0.921M8.46-0.079c-2.165,0-4.33,0.827-5.982,2.481c-3.304,3.308-3.304,8.671,0,11.979c1.652,1.653,3.817,2.48,5.982,2.48c2.166,0,4.329-0.827,5.981-2.48c3.305-3.308,3.305-8.671,0-11.979C12.789,0.749,10.625-0.079,8.46-0.079L8.46-0.079z")
+                            line(fill="none" stroke="#BAC0CA" stroke-miterlimit="10" x1="14.107" y1="14.137" x2="20.465" y2="20.503")
+                li.navbar-user
+                    a(href="#profile")
+                        svg(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="23px" viewBox="0 0 18 23" enable-background="new 0 0 18 23" xml:space="preserve")
+                            path(fill="none" stroke="#BAC0CA" stroke-miterlimit="10" d="M10.42,12.5h-0.293c2.458,0,4.295-2.868,4.295-5.495c0-3.049-2.472-5.578-5.521-5.578s-5.52,2.559-5.52,5.607c0,2.627,1.837,5.466,4.295,5.466H7.215c-4.15,0-6.715,3.133-6.715,7.282V22.5h17v-2.718C17.5,15.633,14.57,12.5,10.42,12.5z")
+                li.lang-swith
+                    a(href="#EN")
+                        i En
+                li.lang-swith.active
+                    a(href="#Ru")
+                        i Ru
+                .main-nav__hamburger
+                    div
+                    div
+                    div
+
+    //.container
     form#header-search-form.header-search-form(method="get" action="#search")
         input#header-search-input.search(type="text" name="q" placeholder="Напишите, что вы ищете...")
         input#header-search-reset.close(type="reset" value="×")

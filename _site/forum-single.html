@@ -25,32 +25,34 @@
         -->
       </nav>
     </div>
-    <div class="container">
-      <header>
-        <!--.top-line
-        //._left-aligned
-            a(href="/").logo--header
-                img(src="./assets/img/logo-alt.png", alt="").logo__img
-                    p.logo__descr Информационно-аналитическая <br> система Фонда Росконгресс
-        ._right-aligned
-            //.search.search--mobile
-                input.input.input--search
-                .search__cross
-            .main-nav__hamburger
-                div
-                div
-                div
-            //.search
-                input.input.input--search
-            //.login
-                a.link.login__link Войти в ЛК
-                a.link.login__link Зарегистрироваться
-            //ul.lang-switcher
-                li.lang-switcher__button.active
-                    span ru
-                li.lang-switcher__button
-                    span en
-        -->
+    <header id="main-header">
+      <!--.top-line
+      //._left-aligned
+          a(href="/").logo--header
+              img(src="./assets/img/logo-alt.png", alt="").logo__img
+                  p.logo__descr Информационно-аналитическая <br> система Фонда Росконгресс
+      ._right-aligned
+          //.search.search--mobile
+              input.input.input--search
+              .search__cross
+          .main-nav__hamburger
+              div
+              div
+              div
+          //.search
+              input.input.input--search
+          //.login
+              a.link.login__link Войти в ЛК
+              a.link.login__link Зарегистрироваться
+          //ul.lang-switcher
+              li.lang-switcher__button.active
+                  span ru
+              li.lang-switcher__button
+                  span en
+      
+      
+      -->
+      <div class="container">
         <div class="main-nav _bg-fluid">
           <!--.main-nav__heading.main-nav__heading--back #{title}-->
           <div class="main-nav__left"><a href="#" class="brand-logo">
@@ -60,9 +62,9 @@
                 </g>
               </svg><span>Информационно-аналитическая<br>система Фонда Росконгресс</span></a></div>
           <ul class="main-nav__list main-nav__menu">
-            <!--li.main-nav__button-->
-            <!--    a(href="/").btn.active Главная-->
-            <li class="main-nav__button active"><a href="#">Темы</a></li>
+            <!--li.main-nav__button.active -- Класс активной ссылки-->
+            <!--    a(href="/") Главная-->
+            <li class="main-nav__button"><a href="#">Темы</a></li>
             <li class="main-nav__button"><a href="in-focus.html">Материалы</a></li>
             <li class="main-nav__button"><a href="to-discuss.html">Мероприятия</a></li>
             <li class="main-nav__button"><a href="forums.html">Спикеры и авторы</a></li>
@@ -87,11 +89,14 @@
             </div>
           </ul>
         </div>
-        <form id="header-search-form" method="get" action="#search" class="header-search-form">
-          <input id="header-search-input" type="text" name="q" placeholder="Напишите, что вы ищете..." class="search">
-          <input id="header-search-reset" type="reset" value="×" class="close">
-        </form>
-      </header>
+      </div>
+      <!--.container-->
+      <form id="header-search-form" method="get" action="#search" class="header-search-form">
+        <input id="header-search-input" type="text" name="q" placeholder="Напишите, что вы ищете..." class="search">
+        <input id="header-search-reset" type="reset" value="×" class="close">
+      </form>
+    </header>
+    <div class="container">
       <div class="wrapper">
         <article class="material material--forum">
           <div class="material__img material__img--vertical--wide"><img src="assets/img/pmef.png" alt="Петербургский Международный Экономический Форум"></div>

@@ -1,3 +1,5 @@
+var $doc = $(document);
+
 function mobileSearch() {
 	$(this).addClass('search--mobile--opened');
 }
@@ -76,13 +78,14 @@ function mainNavMarker () {
 		active = item.filter('.active'),
 		marker = menu.children('.marker'),
 		left = Math.round(item.eq(0).offset().left),
-		W = 0;
+		W = 0,
+		container = menu.parents('.container');
 
 	var delta = function(){
 
-		var w1280 = $(document).width() < 1280;
+		var paddingLeft = parseInt(container.css('padding-left'),10);
 
-		return w1280 ? parseInt(menu.parents('.container').css('padding-left'),10) : header.offset().left;
+		return $doc.width() < 1280 ? paddingLeft : container.offset().left+paddingLeft;
 	};
 
 	////////////////////////////////////
@@ -146,7 +149,7 @@ $(function () {
 	};
 
 
-	$(document).on('click','.navbar-search > a',function(e){
+	$doc.on('click','.navbar-search > a',function(e){
 
 		e.preventDefault();
 		$(this).toggleClass('active');
@@ -170,7 +173,7 @@ $(function () {
 	$('.acc__button').on('click', accordeon);
 
 	if ($('.filters .btn').length){
-		$(document).on('scroll', stickToBottom);
+		$doc.on('scroll', stickToBottom);
 	}
 
 	if ($('.side-filters__filter--select')) {
